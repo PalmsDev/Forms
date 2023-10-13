@@ -18,21 +18,55 @@
     <br />
     <br />
 
-    <form>
+    <form action="./story.html" method="GET">
       <label for="animal1">Animal 1:</label>
-      <input type="text" id="animal1" name="animal1" placeholder="animal" required />
+      <input
+        type="text"
+        id="animal1"
+        name="animal1"
+        placeholder="animal"
+        required
+      />
       <br />
       <br />
       <label for="color1">Color:</label>
-      <input type="text" id="color1" name="color1" placeholder="color" required />
+      <input
+        type="text"
+        id="color1"
+        name="color1"
+        placeholder="color"
+        required
+      />
       <br />
       <br />
       <label for="element1">Element:</label>
-      <input type="text" id="element1" name="element1" placeholder="element" required />
+      <input
+        type="text"
+        id="element1"
+        name="element1"
+        placeholder="element"
+        required
+      />
+      <br />
+      <br />
+      <label for="animal2">Animal2:</label>
+      <input
+        type="text"
+        id="animal2"
+        name="animal2"
+        placeholder="animal"
+        required
+      />
       <br />
       <br />
       <label for="greeting">Greeting:</label>
-      <input type="text" id="greeting" name="greeting" placeholder="greeting" required />
+      <input
+        type="text"
+        id="greeting"
+        name="greeting"
+        placeholder="greeting"
+        required
+      />
       <br />
       <br />
       <label for="num">Number:</label>
@@ -47,10 +81,38 @@
       </select>
       <br />
       <br />
-      <label for="textarea">Meaningful Message:</label><br />
-      <textarea id="textarea" name="textarea" rows="10" cols="50" placeholder="message"></textarea>
+      <label for="message">Meaningful Message:</label><br />
+      <textarea
+        id="message"
+        name="message"
+        rows="10"
+        cols="50"
+        placeholder="message"
+      ></textarea>
       <br />
-      <input type="submit" value="From My Story" />
+      <input type="submit" value="From My Story" onclick="getData()" />
     </form>
+    <script>
+      function getData() {
+        //gettting the values
+        let animal1 = document.getElementById("animal1").value;
+        let animal2 = document.getElementById("animal2").value;
+        let color1 = document.getElementById("color1").value;
+        let element1 = document.getElementById("element1").value;
+        let greeting = document.getElementById("greeting").value;
+        let how = document.getElementById("how").value;
+        let message = document.getElementById("message").value;
+        let number = document.getElementById("num").value;
+        //saving the values in local storage
+        localStorage.setItem("firstAnimal", animal1);
+        localStorage.setItem("secondAnimal", animal2);
+        localStorage.setItem("colorOne", color1);
+        localStorage.setItem("elementOne", element1);
+        localStorage.setItem("howTo", how);
+        localStorage.setItem("message", message);
+        localStorage.setItem("greeting", greeting);
+        localStorage.setItem("numberOfTimes", number);
+      }
+    </script>
   </body>
 </html>
