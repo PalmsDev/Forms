@@ -34,3 +34,10 @@ h1,
   padding: 20px;
   margin: auto;
 }
+
+button {
+  border: 1px solid
+  padding: 10px 20px;
+  background-color:  greenyellow;
+; 
+}
